@@ -318,6 +318,7 @@ h1 {
     padding: 12px;
     max-width: 600px;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .form__input-container :is(input,textarea) {
@@ -329,6 +330,7 @@ h1 {
     border: none;
     box-shadow: 2px 2px 4px #0003;
     border-radius: 10px;
+    background-color: #fffd;
 }
 
 .form__input-container textarea {
@@ -393,9 +395,12 @@ h1 {
 
 /* ------- FOOTER SECTION ------- */
 
-
-/* ------- FOOTER QUERIES ------- */
-
-
+footer {
+    padding: 60px;
+    text-align: center;
+    background-color: #18233f;
+    color: #fff;
+    font-size: 22px;
+}
 
 /* ------- FOOTER ENDS ------- */
