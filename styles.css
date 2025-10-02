@@ -276,6 +276,9 @@ h1 {
     display: grid;
     place-content: center;
     border-radius: 10px;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: contain 5% cover 40%;
 }
 
 .portfolio__project:hover {
@@ -323,6 +326,9 @@ h1 {
     padding: 30px 0;
     container-type: inline-size;
     container-name: form;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 20% contain 50%;
 }
 
 .form__form {
