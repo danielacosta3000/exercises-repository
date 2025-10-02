@@ -18,15 +18,15 @@ div, ul, nav, header, footer, a, li, label, body {
 
 .header {
     background-color    : #fff;
+    color: #48e;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    container-type: inline-size;
-    container-name: header;
     position: relative;
     z-index: 10;
     text-align: center;
     font-size: 20px;
+    padding: 20px 0;
 }
 
 .header__open-nav-button {
@@ -74,7 +74,7 @@ div, ul, nav, header, footer, a, li, label, body {
 }
 
 .header__nav-item a {
-    color: #48e;
+    color: inherit;
 }
 
 .header__nav-item a:not(:is(:hover,:active)) {
@@ -83,9 +83,19 @@ div, ul, nav, header, footer, a, li, label, body {
 
 /* ------- HEADER QUERIES ------- */
 
-@container header (min-width: 600px) {
+@media screen and (min-width: 600px) {
+    .header {
+        padding: 20px 0;
+        animation: header-movement both;
+        animation-timeline: scroll();
+        position: sticky;
+        top: 0;
+        animation-range: 10px 100px;
+    }
+
     .header__nav {
         display: block;
+        background-color: initial;
         position: static;
         height: auto;
         width: auto;
@@ -405,3 +415,18 @@ footer {
 }
 
 /* ------- FOOTER ENDS ------- */
+
+/* ------- ANIMATIONS ------- */
+
+@keyframes header-movement {
+    from {
+        padding: 20px 0;
+        background-color: #fff;
+    }
+    to {
+        background-color: #0006;
+        padding: 0;
+        color: #fff;
+        border-radius: 0 0 25px 25px;
+    }
+}
